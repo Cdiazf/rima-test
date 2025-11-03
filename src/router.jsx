@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import ErrorPage from "./components/ErrorPage";
-import Layout from "./layouts/Layout";
-import Register from "./pages/Register/Register";
+import ErrorPage from "./components/ErrorPage.jsx";
+import Layout from "./layouts/Layout.jsx";
+import Register from "./pages/Register/Register.jsx";
 import Plans from "./pages/Plans/Plans.jsx";
 import Summary from "./pages/Summary/Summary.jsx";
 
@@ -15,14 +15,14 @@ const router = createBrowserRouter([
         index: true,
         element: <Register />,
       },
-      { 
+      {
         path: "/plans",
-        element:<Plans/>,
+        element: <Plans />,
       },
       {
         path: "/summary",
-        element:<Summary/>,
-      }
+        element: <Summary />,
+      },
     ],
   },
 ]);
