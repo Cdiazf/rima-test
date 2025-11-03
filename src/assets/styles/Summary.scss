@@ -1,0 +1,184 @@
+
+.insurance-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+
+
+  &__title {
+    width: 100%;
+    height: 48px;
+    padding-left: 200px;
+    font-family: "Lato",sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.6px;
+    text-align: left;
+
+
+  }
+
+  &__card {
+    background-color: #fff;
+    box-shadow: 0 1px 24px 0 #AEACF340;
+    width: 100%;
+    max-width:928px;
+    height: 308px;
+
+
+    padding: 24px 32px 24px 32px;
+    gap: 16px;
+    border-radius: 24px 24px 24px 24px;
+    margin-top: 40px;
+
+  }
+
+  &__section {
+    max-width: 864px;
+    height: 80px;
+    gap: 16px;
+    margin-top: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    text-align: left;
+    color: #141938;
+
+
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    //border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  &__name {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    text-align: left;
+
+  }
+
+  &__subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-align: left;
+
+  }
+
+  &__detail {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    text-align: left;
+    color: #141938;
+
+  }
+}
+
+
+.summary-separator{
+  width: 864px;
+  border: 1px solid #D7DBF5
+}
+
+@media (max-width: 430px) {
+  .summary-separator{
+    width: 272px;
+    margin-top: -20px;
+  }
+  .insurance-summary {
+    width: 336px;
+    gap: 16px;
+
+    &__title {
+      margin-bottom: 12px;
+      font-family: "Lato",sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 40px;
+      letter-spacing: -0.6px;
+      text-align: left;
+      padding: 0;
+
+    }
+
+    &__card {
+      padding: 12px;
+      border-radius: 8px;
+      max-width: 100%;
+      box-shadow: 02px 4px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      height: 308px;
+    }
+
+    &__section {
+      margin-top: 10px;
+    height: 80px;
+      gap: 16px;
+    }
+
+    &__label {
+      font-size: 10px;
+      margin-bottom: 6px;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__name {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: -0.2px;
+      text-align: left;
+
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.22px;
+      text-align: left;
+    }
+
+    &__detail {
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+      text-align: left;
+      gap: 4px;
+    }
+  }
+}
+

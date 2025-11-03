@@ -1,0 +1,162 @@
+.progress-bar-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  background-color: #edeffc;
+  padding: 16px 0;
+  height: 56px;
+  width: 1360px;
+}
+
+.step-col {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: none;
+  color: #141938;
+  font-weight: bold;
+  font-size: 12px;
+  border: 1px solid #7981b2;
+}
+
+.step-title {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #7981b2;
+}
+
+.step.active .step-number,
+.step.active .step-title {
+  color: #007bff;
+}
+
+.image-progressbar {
+  width: 32px;
+  height: 24px;
+  margin-left: 12px;
+}
+
+
+
+.progress-bar-steps {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+
+  &__back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('/public/imgs/GlLeft.png'); // Replace with actual icon path
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 16px;
+  }
+
+  &__text {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1C1C1E;
+    margin-right: 16px;
+  }
+
+  &__bar {
+    position: relative;
+    flex-grow: 1;
+    height: 8px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; // Adjust this based on step percentage
+    height: 100%;
+    background-color: #6D5DFE;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 430px) {
+
+  .progress-bar-container{
+    display: none;
+  }
+  .progress-bar-steps {
+    display: flex;
+    padding: 12px;
+    width: 100%;
+    margin-top: 0px;
+
+    &__back {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    &__info {
+      margin-left: 12px;
+    }
+
+    &__text {
+      font-size: 12px;
+      margin-right: 12px;
+    }
+
+    &__bar {
+      height: 6px;
+    }
+
+    &__fill {
+      width: 50%; // Adjust this value dynamically for progress
+    }
+  }
+}
